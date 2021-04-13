@@ -28,62 +28,12 @@ body {
   font-family: $font-primary;  
   display: flex;
   flex-direction: column;
-  background: $col-dark-cyan;
+  background: url('/images/bg-pattern-top.svg'),   url('/images/bg-pattern-bottom.svg'), $col-dark-cyan;
+  background-repeat: no-repeat;
+  background-position: right 46vw bottom 43vh, left 51vw top 43vh;
   position: relative;
   overflow: hidden;
-  z-index: 1;
-  
-  &::before {
-    content: ' ';
-    top: -20%;
-    left: -50%;
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background: url('/images/bg-pattern-top.svg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-    @media screen and (min-width: 501px) and (max-width: 1200px) {
-      top: -100px;
-      left: -50px;
-      width: 50%;
-      height: 100vh;
-    }
-
-    @media screen and (min-width: 1201px) and (max-width: 2000px) {
-      top: -40%;
-      left: -10%;
-      width: 50%;
-      height: 100vh;
-    }
-  }
-
-  &::after {
-    content: ' ';
-    bottom: -100px;
-    right: -50%;
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    background: url('/images/bg-pattern-bottom.svg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-    @media screen and (min-width: 501px) and (max-width: 1200px) {
-      bottom: -50%;
-      right: -100px;
-      width: 65%;
-      height: 100vh;
-    }
-
-    @media screen and (min-width: 1201px) and (max-width: 2000px) {
-      bottom: -40%;
-      right: -10%;
-      width: 50%;
-      height: 100vh;
-    }
-  }  
+  z-index: 1;  
 }
 
 .card {

@@ -18,70 +18,12 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  background: #19a2ae;
+  background: url("/images/bg-pattern-top.svg"), url("/images/bg-pattern-bottom.svg"), #19a2ae;
+  background-repeat: no-repeat;
+  background-position: right 46vw bottom 43vh, left 51vw top 43vh;
   position: relative;
   overflow: hidden;
   z-index: 1;
-}
-
-body::before {
-  content: ' ';
-  top: -20%;
-  left: -50%;
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  background: url("/images/bg-pattern-top.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 501px) and (max-width: 1200px) {
-  body::before {
-    top: -100px;
-    left: -50px;
-    width: 50%;
-    height: 100vh;
-  }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 2000px) {
-  body::before {
-    top: -40%;
-    left: -10%;
-    width: 50%;
-    height: 100vh;
-  }
-}
-
-body::after {
-  content: ' ';
-  bottom: -100px;
-  right: -50%;
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  background: url("/images/bg-pattern-bottom.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 501px) and (max-width: 1200px) {
-  body::after {
-    bottom: -50%;
-    right: -100px;
-    width: 65%;
-    height: 100vh;
-  }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 2000px) {
-  body::after {
-    bottom: -40%;
-    right: -10%;
-    width: 50%;
-    height: 100vh;
-  }
 }
 
 .card {
