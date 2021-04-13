@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$font-primary: 'Kumbh Sans', sans-serif;
+
+$col-dark-cyan: hsl(185, 75%, 39%);
+$col-dark-desaturated-blue: hsl(229, 23%, 23%);
+$col-dark-grayish-blue: hsl(227, 10%, 46%);
+$col-dark-gray: hsl(0, 0%, 59%);
+
+$font-size-def : 18px;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: $font-primary;  
+  display: flex;
+  flex-direction: column;
+  background: $col-dark-cyan;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  
+  &::before {
+    content: ' ';
+    top: -20%;
+    left: -50%;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background: url('/images/bg-pattern-top.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 501px) and (max-width: 1200px) {
+      top: -100px;
+      left: -50px;
+      width: 50%;
+      height: 100vh;
+    }
+
+    @media screen and (min-width: 1201px) and (max-width: 2000px) {
+      top: -40%;
+      left: -10%;
+      width: 50%;
+      height: 100vh;
+    }
+  }
+
+  &::after {
+    content: ' ';
+    bottom: -100px;
+    right: -50%;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background: url('/images/bg-pattern-bottom.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 501px) and (max-width: 1200px) {
+      bottom: -50%;
+      right: -100px;
+      width: 65%;
+      height: 100vh;
+    }
+
+    @media screen and (min-width: 1201px) and (max-width: 2000px) {
+      bottom: -40%;
+      right: -10%;
+      width: 50%;
+      height: 100vh;
+    }
+  }  
+}
+
+.card {
+  background: #fff;
+  border-radius: 1em;
+  min-width: 270px;
+
+  &__header {
+    height: 150px;
+    background: url('/images/bg-pattern-card.svg');
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    position: relative;
+    text-align: center;
+    
+    &__thumb {
+      width: 96;
+      height: 96;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      position: relative;
+      top: 60%;
+    }
+  }
+
+  &__body {
+    text-align: center;
+    padding: 4em 0 2em 0;
+    border-bottom: 1px solid #ccc;
+
+    &__name {
+      font-size: $font-size-def;
+      color: $col-dark-desaturated-blue;
+      display: inline-block;
+    }
+
+    &__age {
+      color: $col-dark-grayish-blue;
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    &__loc {
+      color: $col-dark-grayish-blue;      
+      font-size: .85em;
+      margin-top: 1em;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5em;
+    text-align: center;
+
+    &__info {
+      &__value {
+        font-weight: bold;
+        font-size: 1.25em;
+        color: $col-dark-desaturated-blue;
+      }
+
+      &__label {
+        font-size: .75em;
+        font-weight: bold;
+        margin-top: 5px;
+        color: $col-dark-gray;
+      }
+    }
+  }
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+

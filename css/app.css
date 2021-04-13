@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #19a2ae;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+body::before {
+  content: ' ';
+  top: -20%;
+  left: -50%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  background: url("/images/bg-pattern-top.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 501px) and (max-width: 1200px) {
+  body::before {
+    top: -100px;
+    left: -50px;
+    width: 50%;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 2000px) {
+  body::before {
+    top: -40%;
+    left: -10%;
+    width: 50%;
+    height: 100vh;
+  }
+}
+
+body::after {
+  content: ' ';
+  bottom: -100px;
+  right: -50%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  background: url("/images/bg-pattern-bottom.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 501px) and (max-width: 1200px) {
+  body::after {
+    bottom: -50%;
+    right: -100px;
+    width: 65%;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 2000px) {
+  body::after {
+    bottom: -40%;
+    right: -10%;
+    width: 50%;
+    height: 100vh;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 1em;
+  min-width: 270px;
+}
+
+.card__header {
+  height: 150px;
+  background: url("/images/bg-pattern-card.svg");
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  position: relative;
+  text-align: center;
+}
+
+.card__header__thumb {
+  width: 96;
+  height: 96;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: relative;
+  top: 60%;
+}
+
+.card__body {
+  text-align: center;
+  padding: 4em 0 2em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.card__body__name {
+  font-size: 18px;
+  color: #2d3248;
+  display: inline-block;
+}
+
+.card__body__age {
+  color: #6a6f81;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.card__body__loc {
+  color: #6a6f81;
+  font-size: .85em;
+  margin-top: 1em;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.card__footer__info__value {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #2d3248;
+}
+
+.card__footer__info__label {
+  font-size: .75em;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #969696;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
