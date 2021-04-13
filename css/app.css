@@ -88,6 +88,7 @@ body::after {
   background: #fff;
   border-radius: 1em;
   min-width: 270px;
+  width: 350px;
 }
 
 .card__header {
